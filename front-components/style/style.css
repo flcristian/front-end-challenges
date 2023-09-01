@@ -1,0 +1,229 @@
+*{
+    font-family: 'Comfortaa', cursive;
+}
+
+html{
+    height: 100%;
+}
+
+.container{
+    background-color: rgb(5, 7, 12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.title-container{
+    margin-top: 50px;
+    padding: 0;
+    display: flex;
+}
+
+.title-letter{
+    font-size: 2em;
+    list-style: none;
+    color: rgb(10, 14, 22);
+    text-shadow: none;
+    animation: flicker2 8s linear infinite;
+    transition: all 0.3s;
+}
+
+@keyframes flicker2{
+    0% {
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+    9% {
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+    10%{
+        color: rgba(255, 179, 37, 0.829);
+        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+    }
+
+    11% {
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+    22%{
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+    23%{
+        color: rgba(255, 179, 37, 0.829);
+        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+    }
+
+    24%{
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+    34%{
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+
+   35%{
+        color: rgba(255, 179, 37, 0.829);
+        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+    }
+
+    94%{
+        color: rgba(255, 179, 37, 0.829);
+        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+    }
+
+    100%{
+        color: rgb(10, 14, 22);
+        text-shadow: none;
+    }
+}
+
+/* MAIN CHALLENGE CONTAINER */
+
+.challenge-container{
+    margin-top: 20px;
+    border-radius: 20px;
+    background-color: rgb(7, 10, 19);
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 15px;
+    row-gap: 15px;
+    padding: 20px;
+}
+
+.challenge{
+    background-color: rgb(12, 17, 29);
+    width: 180px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+.challenge:hover{
+    cursor: pointer;
+}
+
+.challenge-thumbnail{
+    width: 150px;
+    height: 150px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.challenge-title{
+    color: rgb(166, 170, 182);
+    font-size: 20px;
+    text-align: center;
+}
+
+@media (min-width: 480px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 640px){
+    .title-letter{
+        font-size: 4em;
+    }
+
+    @keyframes flicker2{
+        0% {
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+        9% {
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+        10%{
+            color: rgba(255, 179, 37, 0.829);
+            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
+        }
+    
+        11% {
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+        22%{
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+        23%{
+            color: rgba(255, 179, 37, 0.829);
+            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
+        }
+    
+        24%{
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+        34%{
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    
+       35%{
+            color: rgba(255, 179, 37, 0.829);
+            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
+        }
+    
+        94%{
+            color: rgba(255, 179, 37, 0.829);
+            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
+        }
+    
+        100%{
+            color: rgb(10, 14, 22);
+            text-shadow: none;
+        }
+    }
+    
+}
+
+@media (min-width: 700px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1150px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1300px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1450px){
+    .challenge-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
