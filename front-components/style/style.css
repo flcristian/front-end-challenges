@@ -20,16 +20,24 @@ html{
     display: flex;
 }
 
+.title-container:hover{
+    cursor: default;
+}
+
 .title-letter{
+
     font-size: 2em;
     list-style: none;
     color: rgb(10, 14, 22);
     text-shadow: none;
-    animation: flicker2 8s linear infinite;
+    animation-name: flicker;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
     transition: all 0.3s;
 }
 
-@keyframes flicker2{
+@keyframes flicker{
     0% {
         color: rgb(10, 14, 22);
         text-shadow: none;
@@ -41,8 +49,8 @@ html{
     }
 
     10%{
-        color: rgba(255, 179, 37, 0.829);
-        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+        color: rgba(255, 196, 194, 0.829);
+        text-shadow: 0 0 8px #fc3939, 0 0 50px #ff0800, 0 0 60px rgb(82, 10, 10);
     }
 
     11% {
@@ -56,8 +64,8 @@ html{
     }
 
     23%{
-        color: rgba(255, 179, 37, 0.829);
-        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+        color: rgba(255, 196, 194, 0.829);
+        text-shadow: 0 0 4px #fc3939, 0 0 25px #ff0800, 0 0 60px rgb(82, 10, 10);
     }
 
     24%{
@@ -71,25 +79,88 @@ html{
     }
 
    35%{
-        color: rgba(255, 179, 37, 0.829);
-        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
-    }
-
-    94%{
-        color: rgba(255, 179, 37, 0.829);
-        text-shadow: 0 0 4px #fff900, 0 0 15px #ff6c00;
+    color: rgba(255, 196, 194, 0.829);
+    text-shadow: 0 0 4px #fc3939, 0 0 25px #ff0800, 0 0 60px rgb(82, 10, 10);
     }
 
     100%{
-        color: rgb(10, 14, 22);
-        text-shadow: none;
+        color: rgba(255, 196, 194, 0.829);
+        text-shadow: 0 0 4px #fc3939, 0 0 25px #ff0800, 0 0 60px rgb(82, 10, 10);
     }
 }
 
 /* MAIN CHALLENGE CONTAINER */
 
-.challenge-container{
+.neon-border{
     margin-top: 20px;
+    padding: 25px;
+    border: 5px solid rgb(10, 14, 22);
+    box-shadow: none;
+    border-radius: 30px;
+    animation-name: flicker2;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: 0.025s;
+}
+
+@keyframes flicker2{
+    0% {
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+    9% {
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+    10%{
+        border: 5px solid #bad6ff;
+        box-shadow: 0 0 3px #0077ff, 0 0 12px #174bf7, 0 0 25px #0e2c8d,
+        inset 0 0 3px #0077ff, inset 0 0 12px #174bf7, inset 0 0 25px #0e2c8d;
+    }
+
+    11% {
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+    22%{
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+    23%{
+        border: 5px solid #bad6ff;
+        box-shadow: 0 0 3px #0077ff, 0 0 12px #174bf7, 0 0 25px #0e2c8d,
+        inset 0 0 3px #0077ff, inset 0 0 12px #174bf7, inset 0 0 25px #0e2c8d;
+    }
+
+    24%{
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+    34%{
+        border: 5px solid rgb(10, 14, 22);
+        box-shadow: none;
+    }
+
+   35%{
+        border: 5px solid #bad6ff;
+        box-shadow: 0 0 3px #0077ff, 0 0 12px #174bf7, 0 0 25px #0e2c8d,
+        inset 0 0 3px #0077ff, inset 0 0 12px #174bf7, inset 0 0 25px #0e2c8d;
+    }
+
+    100%{
+        border: 5px solid #bad6ff;
+        box-shadow: 0 0 3px #0077ff, 0 0 12px #174bf7, 0 0 25px #0e2c8d,
+        inset 0 0 3px #0077ff, inset 0 0 12px #174bf7, inset 0 0 25px #0e2c8d;
+    }
+}
+
+.challenge-container{
     border-radius: 20px;
     background-color: rgb(7, 10, 19);
     display: grid;
@@ -100,7 +171,7 @@ html{
 }
 
 .challenge{
-    background-color: rgb(12, 17, 29);
+    background-color: rgb(12, 15, 29);
     width: 180px;
     height: 250px;
     display: flex;
@@ -109,6 +180,26 @@ html{
     gap: 5px;
     border-radius: 10px;
     text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.challenge:before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    background-color: rgb(12, 15, 29);
+    bottom: -10px;
+    right: -10px;
+    z-index: 0;
+    position: absolute;
+    border-radius: 50%;
+    transition: all 0.4s;
+}
+
+.challenge:hover:before{
+    transform: scale(70);
+    background-color: rgb(16, 20, 37);
 }
 
 .challenge:hover{
@@ -120,12 +211,14 @@ html{
     height: 150px;
     margin-top: 15px;
     border-radius: 5px;
+    z-index: 1;
 }
 
 .challenge-title{
     color: rgb(166, 170, 182);
     font-size: 20px;
     text-align: center;
+    z-index: 1;
 }
 
 @media (min-width: 480px){
@@ -138,64 +231,6 @@ html{
     .title-letter{
         font-size: 4em;
     }
-
-    @keyframes flicker2{
-        0% {
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-        9% {
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-        10%{
-            color: rgba(255, 179, 37, 0.829);
-            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
-        }
-    
-        11% {
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-        22%{
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-        23%{
-            color: rgba(255, 179, 37, 0.829);
-            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
-        }
-    
-        24%{
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-        34%{
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    
-       35%{
-            color: rgba(255, 179, 37, 0.829);
-            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
-        }
-    
-        94%{
-            color: rgba(255, 179, 37, 0.829);
-            text-shadow: 0 0 4px #fff900, 0 0 25px #ff6c00;
-        }
-    
-        100%{
-            color: rgb(10, 14, 22);
-            text-shadow: none;
-        }
-    }
-    
 }
 
 @media (min-width: 700px){
