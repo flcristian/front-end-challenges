@@ -1,0 +1,147 @@
+*{
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+/* BACK BUTTON */
+
+.back-button{
+    font-family: 'Montserrat', sans-serif; 
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 5px 15px;
+    background-color: rgb(7, 10, 19);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* CHALLENGE */
+
+html{
+    height: 100%;
+}
+
+body{
+    width: 100vw;
+    height: 100%;
+    background-color: #f3eae3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+    background-color: white;
+    width: 900px;
+    border-radius: 20px;
+}
+
+.image{
+    width: 50%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* DESCRIPTION CONTAINER */
+
+.description-container{
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.label{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.title{
+    color: hsl(212, 21%, 14%);
+    margin: 0;
+    padding: 0;
+    font-size: 50px;
+}
+
+.description{
+    margin: 10px 0 0 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+    color: hsl(228, 12%, 48%);
+    font-size: 19px;
+    letter-spacing: 0;
+}
+
+.price-container{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.price-new{
+    font-size: 40px;
+    color: #3e8168;
+}
+
+.price-old{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 500;
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+.button{
+    margin: 0;
+    padding: 5px 30px 5px 30px;
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+    align-items: center;
+    background-color: #3e8168;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.button-icon{
+    height: 30px;
+}
+
+.button-text{
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    color: white;
+}
+
+@media (max-width: 960px){    
+    body{
+        padding: 100px 0 100px 0;
+    }
+    
+    main{
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+    }
+
+    .image{
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-left-radius: 0;
+        max-height: 350px;
+        width: auto;
+    }
+}
