@@ -214,6 +214,7 @@ html{
 }
 
 .challenge-title{
+    padding: 0 10px;
     color: rgb(166, 170, 182);
     font-size: 20px;
     text-align: center;

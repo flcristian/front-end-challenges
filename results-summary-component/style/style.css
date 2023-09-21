@@ -1,0 +1,172 @@
+*{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+a, p, h1, h2, h3{
+    margin: 0;
+    padding: 0;
+    color: hsl(241, 100%, 89%);
+}
+
+h1, h2{
+    color: white;
+}
+
+/* HEADER */
+
+.results-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 50px;
+    text-align: center;
+    background-image: linear-gradient(hsl(258, 100%, 67%), hsl(241, 100%, 46%));
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.average-score-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 20px 30px;
+    background-image: linear-gradient(rgb(74, 16, 235), hsla(241, 72%, 46%, 0));
+    border-radius: 50%;
+    text-align: center;
+}
+
+.average-score{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+/* SUMMARY */
+
+.summary-container{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+}
+
+.summary-title{
+    color: hsl(224, 30%, 27%);
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.summary-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.summary-item-title-container{
+    display: flex;
+    gap: 10px;
+}
+
+.summary-item-score{
+    display: flex;
+    gap: 7px;
+}
+
+.obtained-score{
+    font-weight: 700;
+    color: hsl(224, 30%, 27%);
+}
+
+.summary-maximum-score{
+    font-weight: 700;
+    color: hsla(224, 30%, 27%, 0.5)
+}
+
+/* SUMMARY COLORS */
+
+.reaction{
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.memory{
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.verbal{
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.visual{
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.reaction-title{
+    color: hsl(0, 100%, 67%);
+}
+
+.memory-title{
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal-title{
+    color: hsl(166, 100%, 37%);
+}
+
+.visual-title{
+    color: hsl(234, 85%, 45%);
+}
+
+/* CONTINUE BUTTON */
+
+.continue-button{
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    padding: 15px 0;
+    font-size: 20px;
+    border-radius: 30px ;
+    background-color: hsl(224, 30%, 27%);
+}
+
+@media (min-width: 1000px){    
+    html{
+        display: flex;
+        height: 100vh;
+        background-color: hsl(221, 100%, 96%);
+        align-items: center;
+        justify-content: center;
+    }
+
+    body{
+        margin: auto;
+        display: grid;
+        grid-template-columns: 400px 400px;
+        grid-template-rows: 1fr;
+        background-color: white;
+        border-radius: 30px;
+        box-shadow: 0 0 10px rgb(119, 119, 119);
+    }
+
+    .results-container{
+        height: 500px;
+        border-radius: 30px;
+        justify-content: center;
+    }
+}
+
+/* !!IGNORE THIS!! */
+/* BACK BUTTON */
+
+.back-button{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 5px 15px;
+    background-color: rgb(7, 10, 19);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+}
