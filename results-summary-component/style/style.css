@@ -156,17 +156,3 @@ h1, h2{
         justify-content: center;
     }
 }
-
-/* !!IGNORE THIS!! */
-/* BACK BUTTON */
-
-.back-button{
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    padding: 5px 15px;
-    background-color: rgb(7, 10, 19);
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-}
