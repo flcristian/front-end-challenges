@@ -1,0 +1,123 @@
+*, h1{
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(0, 0%, 95%);
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    padding: 400px 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    width: min(80%, 1200px);
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+}
+
+.card-title{
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.card-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 60px;
+}
+
+.card-container:nth-child(1){
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: hsl(31, 77%, 52%);
+}
+.card-container:nth-child(2){
+    background-color: hsl(184, 100%, 22%);
+}
+.card-container:nth-child(3){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: hsl(179, 100%, 13%);
+}
+
+.card-icon{
+    max-width: 50px;
+}
+
+.card-description{
+    color: hsla(0, 0%, 100%, 0.75);
+    letter-spacing: 0.25px;
+    line-height: 25px;
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.card-button{
+    width: 90px;
+    margin-top: auto;
+    padding: 20px 30px;
+    background-color: hsl(0, 0%, 95%);
+    border-radius: 30px;
+    border: 3px solid hsl(0, 0%, 95%);
+    transition: all 0.25s;
+}
+
+.card-button:hover{
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.card-button-1{
+    color:hsl(31, 77%, 52%);
+}
+.card-button-2{
+    color:hsl(184, 100%, 22%);
+}
+.card-button-3{
+    color:hsl(179, 100%, 13%);
+}
+
+@media (min-width: 640px){
+    body{
+        padding: 200px 0;
+    }
+}
+
+@media (min-width: 920px){
+    body{
+        padding: 0;
+    }
+    
+    main{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 700px;
+    }
+
+    .card-container:nth-child(1){
+        border-top-right-radius: 0;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: hsl(31, 77%, 52%);
+    }
+    .card-container:nth-child(2){
+        background-color: hsl(184, 100%, 22%);
+    }
+    .card-container:nth-child(3){
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        background-color: hsl(179, 100%, 13%);
+    }
+}
