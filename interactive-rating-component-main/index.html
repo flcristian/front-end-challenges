@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet">
+  <title>Interactive rating component</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="script/script.js"></script>
+</head>
+<body>
+  <main class="state-container">
+    <section id="first-state" class="first-state-container">
+      <img class="first-state-icon" src="images/icon-star.svg" alt="">
+      <h1 class="first-state-title">How did we do?</h1>
+      <p class="first-state-text">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+      <div class="rating-container">
+        <div class="rating-div"><input class="rating" type="radio" id="rating-1" name="rating" value="1"><label class="rating-label" for="rating-1">1</label></input></div>
+        <div class="rating-div"><input class="rating" type="radio" id="rating-2" name="rating" value="2"><label class="rating-label" for="rating-2">2</label></input></div>
+        <div class="rating-div"><input class="rating" type="radio" id="rating-3" name="rating" value="3"><label class="rating-label" for="rating-3">3</label></input></div>
+        <div class="rating-div"><input class="rating" type="radio" id="rating-4" name="rating" value="4"><label class="rating-label" for="rating-4">4</label></input></div>
+        <div class="rating-div"><input class="rating" type="radio" id="rating-5" name="rating" value="5"><label class="rating-label" for="rating-5">5</label></input></div>
+      </div>
+      <button id="submit-button" class="first-state-submit">Submit</button>
+      <p id="submit-button-error">Please select a rating!</p>
+    </section>
+    <section id="second-state" class="second-state-container">
+      <img class="second-state-image" src="images/illustration-thank-you.svg" alt="">
+      <h2 class="second-state-rating">You selected <span id="replace-rating-value">#</span> out of 5</h2>
+      <h1 class="second-state-title">Thank you!</h1>
+      <p class="second-state-text">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+    </section>
+  </main>
+</body>
+</html>
