@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <script src="script/menu.js"></script>
+  <script src="script/window.js"></script>
+  <title>News homepage</title>
+</head>
+<body>
+  <nav class="nav-bar">
+    <img class="nav-logo" src="assets/images/logo.svg" alt="">
+    <button class="menu-open-button" id="open-button" onclick="openMenu()"><img class="menu-open" src="assets/images/icon-menu.svg" alt=""></button>
+    <button class="menu-close-button" id="close-button" onclick="closeMenu()"><img class="menu-close" src="assets/images/icon-menu-close.svg" alt=""></button>
+    <div id="menu-container" class="menu-container">
+      <div id="menu-background" class="menu-background">
+        <ul class="menu-close">
+          <li class="menu-item"><a href="">Home</a></li>
+          <li class="menu-item"><a href="">New</a></li>
+          <li class="menu-item"><a href="">Popular</a></li>
+          <li class="menu-item"><a href="">Trending</a></li>
+          <li class="menu-item"><a href="">Categories</a></li>
+        </ul>
+      </div>
+    </div>
+    <ul class="menu-desktop">
+      <li class="menu-item"><a href="">Home</a></li>
+      <li class="menu-item"><a href="">New</a></li>
+      <li class="menu-item"><a href="">Popular</a></li>
+      <li class="menu-item"><a href="">Trending</a></li>
+      <li class="menu-item"><a href="">Categories</a></li>
+    </ul>
+  </nav>
+  <main class="article-container">
+    <img id="image" class="first-image" src="assets/images/image-web-3-mobile.jpg" alt="">
+    <h1 class="first-title">The Bright Future of Web 3.0?</h1>
+    <article class="first-description">
+      <p class="first-text">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+      <a class="first-read-more" href="">READ MORE</a>
+    </article>
+    <section class="new-article-container">
+      <h1 class="new-article-container-title">New</h1>
+      <article class="new-article">
+        <a href="" class="new-article-title">Hydrogen VS Electric Cars</a>
+        <p class="new-article-text">Will hydrogen-fueled cars ever catch up to EVs?</p>
+      </article>
+      <hr>
+      <article class="new-article">
+        <a href="" class="new-article-title">The Downsides of AI Artistry</a>
+        <p class="new-article-text">What are the possible adverse effects of on-demand AI image generation?</p>
+      </article>
+      <hr>
+      <article class="new-article">
+        <a href="" class="new-article-title">Is VC Funding Drying Up?</a>
+        <p class="new-article-text">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+      </article>
+    </section>
+  </main>
+  <aside class="final-article-container">
+    <article class="final-article">
+      <img class="final-article-image" src="assets/images/image-retro-pcs.jpg" alt="">
+      <section class="final-article-description">
+        <h1 class="final-article-index">01</h1>
+        <a href="" class="final-article-title">Reviving Retro PCs</a>
+        <p class="final-article-text">What happens when old PCs are given modern upgrades?</p>
+      </section>
+    </article>
+    <article class="final-article">
+      <img class="final-article-image" src="assets/images/image-top-laptops.jpg" alt="">
+      <section class="final-article-description">
+        <h1 class="final-article-index">02</h1>
+        <a href="" class="final-article-title">Top 10 Laptops of 2022</a>
+        <p class="final-article-text">Our best picks for various needs and budgets.</p>
+      </section>
+    </article>
+    <article class="final-article">
+      <img class="final-article-image" src="assets/images/image-gaming-growth.jpg" alt="">
+      <section class="final-article-description">
+        <h1 class="final-article-index">03</h1>
+        <a href="" class="final-article-title">The Growth of Gaming</a>
+        <p class="final-article-text">How the pandemic has sparked fresh opportunities.</p>
+      </section>
+    </article>
+  </aside>
+</body>
+</html>
