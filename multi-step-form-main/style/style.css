@@ -1,0 +1,62 @@
+*, h1, h2{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.menu-background-image{
+    height: 200px;
+    width: 100vw;
+    object-fit: cover;
+    position: relative;
+}
+
+.menu-container{
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+
+.menu-select-container{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.menu-option{
+    position: relative;
+    display: inline-block;
+}
+
+.menu-option-radio{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    border: 2px solid white;
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.menu-option-radio:hover, .menu-option-label:hover{
+    cursor: pointer;
+}
+
+.menu-option-radio:checked{
+    background-color: hsl(231, 100%, 99%);
+}
+
+.menu-option-label{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
