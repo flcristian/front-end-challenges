@@ -1,0 +1,70 @@
+*, h1{
+    font-family: 'Onest', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    background-color: #0c0908;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    width: 60%;
+}
+
+.image-panel{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 70vh;
+    flex: 1;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.image-panel-1{
+    background-image: url("../images/image-1.jpg");
+}
+.image-panel-2{
+    background-image: url("../images/image-2.jpg");
+}
+.image-panel-3{
+    background-image: url("../images/image-3.jpg");
+}
+.image-panel-4{
+    background-image: url("../images/image-4.jpg");
+}
+.image-panel-5{
+    background-image: url("../images/image-5.jpg");
+}
+
+.image-title{
+    position: absolute;
+    pointer-events: none;
+    font-size: 24px;
+    bottom: 0;
+    left: 15px;
+    color: white;
+    opacity: 0;
+    transition: all .5s;
+}
+
+.image-panel.active{
+    flex: 10;
+}
+
+.image-title.active-text{
+    opacity: 1;
+}
