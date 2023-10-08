@@ -47,7 +47,13 @@ body{
 
 .menu-option{
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-option-index{
+    position: relative;
 }
 
 .menu-option-radio{
@@ -64,7 +70,7 @@ body{
     transition: all 0.35s;
 }
 
-.menu-option-radio:hover, .menu-option-label:hover{
+.menu-option-radio:hover, .menu-option-number:hover, .menu-option:hover, .menu-option-label-container:hover{
     cursor: pointer;
 }
 
@@ -72,11 +78,11 @@ body{
     background-color: hsl(206, 94%, 87%);
 }
 
-.menu-option-radio:checked + .menu-option-label,.menu-option-radio:hover + .menu-option-label{
+.menu-option-radio:checked + .menu-option-number,.menu-option-radio:hover + .menu-option-number{
     color: hsl(213, 96%, 18%);
 }
 
-.menu-option-label{
+.menu-option-number{
     color: hsl(206, 94%, 87%);
     position: absolute;
     top: 50%;
@@ -84,6 +90,22 @@ body{
     transform: translate(-50%, -60%);
     font-weight: 500;
     transition: all 0.35s;
+}
+
+.menu-option-label-container{
+    flex-direction: column;
+}
+
+.menu-option-label-step{
+    font-size: 11px;
+    font-weight: 500;
+    color: hsl(228, 100%, 84%);
+}
+
+.menu-option-label-text{
+    font-size: 12px;
+    font-weight: 500;
+    color: hsl(229, 24%, 87%);
 }
 
 /* FORM STEPS CONTAINER */
@@ -98,7 +120,7 @@ body{
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
-    padding: 30px;
+    padding: 30px 100px;
 }
 
 /* STEP 1*/
@@ -508,7 +530,7 @@ body{
         display: flex;
         flex-direction: column;
         box-shadow: none;
-        border-radius: none;
+        border-radius: 0;
     }
 
     .footer-container{
