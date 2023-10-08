@@ -116,6 +116,12 @@ header{
     z-index: 1;
 }
 
+/* JAVASCRIPT PROJECTS */
+
+.javascript-title{
+    margin: 100px 0 50px 0;
+}
+
 /* FOOTER */
 
 footer{
