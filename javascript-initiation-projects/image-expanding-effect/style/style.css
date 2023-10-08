@@ -19,7 +19,7 @@ body{
     margin: auto;
     display: flex;
     gap: 40px;
-    width: 60%;
+    width: 70%;
 }
 
 .image-panel{
@@ -67,4 +67,23 @@ body{
 
 .image-title.active-text{
     opacity: 1;
+}
+
+@media (max-width: 740px){
+    .container{
+        width: 90%;
+        gap: 20px;
+    }
+
+    .image-panel{
+        flex: 2;
+    }
+
+    .image-title{
+        font-size: 18px;
+    }
+
+    .image-panel:nth-of-type(4), .image-panel:nth-of-type(5){
+        display: none;
+    }
 }
