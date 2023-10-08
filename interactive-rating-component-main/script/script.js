@@ -27,7 +27,6 @@ function submitButton(){
             setTimeout(function() {
                 second.style.opacity = "100%";
             }, 10);
-            
         }
     });
 

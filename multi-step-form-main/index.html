@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Multi-step form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/reset.css">
+  <script src="script/responsiveness.js"></script>
+</head>
+<body>
+  <main id="main-container" class="main-container">
+    <header class="header-container">
+      <img id="background-img" class="menu-background-image" src="assets/images/bg-sidebar-mobile.svg" alt="">
+      <section class="menu-container">
+        <ul class="menu-select-container">
+          <li class="menu-option">
+            <section class="menu-option-index">
+              <input class="menu-option-radio" type="radio" name="menu" id="menu-step-1" value="1" checked>
+              <label class="menu-option-number" for="menu-step-1">1</label>
+            </section>
+            <label class="menu-option-label-container" for="menu-step-1">
+              <p class="menu-option-label-step">STEP 1</p>
+              <p class="menu-option-label-text">YOUR INFO</p>
+            </label>
+          </li>
+          <li class="menu-option">
+            <section class="menu-option-index">
+              <input class="menu-option-radio" type="radio" name="menu" id="menu-step-2" value="2">
+              <label class="menu-option-number" for="menu-step-2">2</label>
+            </section>
+            <label class="menu-option-label-container" for="menu-step-2">
+              <p class="menu-option-label-step">STEP 2</p>
+              <p class="menu-option-label-text">YOUR INFO</p>
+            </label>
+          </li>
+          <li class="menu-option">
+            <section class="menu-option-index">
+              <input class="menu-option-radio" type="radio" name="menu" id="menu-step-3" value="3">
+              <label class="menu-option-number" for="menu-step-3">3</label>
+            </section>
+            <label class="menu-option-label-container" for="menu-step-3">
+              <p class="menu-option-label-step">STEP 3</p>
+              <p class="menu-option-label-text">YOUR INFO</p>
+            </label>
+          </li>
+          <li class="menu-option">
+            <section class="menu-option-index">
+              <input class="menu-option-radio" type="radio" name="menu" id="menu-step-4" value="4">
+              <label class="menu-option-number" for="menu-step-4">4</label>
+            </section>
+            <label class="menu-option-label-container" for="menu-step-4">
+              <p class="menu-option-label-step">STEP 4</p>
+              <p class="menu-option-label-text">YOUR INFO</p>
+            </label>
+          </li>
+        </ul>
+      </section>
+    </header>
+    <aside id="form-container" class="form-steps-container">
+      <!--    STEP 1-->
+      <section class="step-1-container step-container">
+        <h1 class="step-1-title step-title">Personal info</h1>
+        <p class="step-1-description step-description">Please provide your name, email address, and phone number.</p>
+        <ul class="step-1-form-container">
+          <li class="step-1-form-item">
+            <label for="user-name">Name</label>
+            <input type="text" class="step-1-form-name" id="user-name" placeholder="e.g. Stephen King">
+          </li>
+          <li class="step-1-form-item">
+            <label for="user-email">Email Adress</label>
+            <input type="text" class="step-1-form-email" id="user-email" placeholder="e.g. stephenking@lorem.com">
+          </li>
+          <li class="step-1-form-item">
+            <label for="user-phone">Phone Number</label>
+            <input type="text" class="step-1-form-phone" id="user-phone" placeholder="e.g. +1 234 567 890">
+          </li>
+        </ul>
+        <p id="complete-warning">Please complete all fields to continue</p>
+      </section>
+      <!--    STEP 2-->
+      <section class="step-2-container step-container">
+        <h1 class="step-2-title step-title">Select your plan</h1>
+        <p class="step-2-description step-description">You have the option of monthly or yearly billing.</p>
+        <ul class="step-2-form-container">
+          <li class="step-2-form-item">
+            <input class="step-2-radio" type="radio" name="plan-radio" id="arcade-option" value="1" checked>
+            <label class="step-2-radio-details" for="arcade-option">
+              <img class="step-2-radio-image" src="assets/images/icon-arcade.svg" alt="">
+              <div class="step-2-radio-description">
+                <h2 class="step-2-radio-title">Arcade</h2>
+                <p class="step-2-radio-price">$9/mo</p>
+                <p class="step-2-free-months">2 months free</p>
+              </div>
+            </label>
+          </li>
+          <li class="step-2-form-item">
+            <input class="step-2-radio" type="radio" name="plan-radio" id="advanced-option" value="2">
+            <label class="step-2-radio-details" for="advanced-option">
+              <img class="step-2-radio-image" src="assets/images/icon-advanced.svg" alt="">
+              <div class="step-2-radio-description">
+                <h2 class="step-2-radio-title">Advanced</h2>
+                <p class="step-2-radio-price">$12/mo</p>
+                <p class="step-2-free-months">2 months free</p>
+              </div>
+            </label>
+          </li>
+          <li class="step-2-form-item">
+            <input class="step-2-radio" type="radio" name="plan-radio" id="pro-option" value="3">
+            <label class="step-2-radio-details" for="pro-option">
+              <img class="step-2-radio-image" src="assets/images/icon-pro.svg" alt="">
+              <div class="step-2-radio-description">
+                <h2 class="step-2-radio-title">Pro</h2>
+                <p class="step-2-radio-price">$15/mo</p>
+                <p class="step-2-free-months">2 months free</p>
+              </div>
+            </label>
+          </li>
+        </ul>
+        <aside class="plan-type-selection-container">
+          <label for="plan-type">Monthly</label>
+          <label class="plan-type-selection-input-container">
+            <input class="plan-type-selection-input" type="checkbox" id="plan-type" onclick="switchPlanType()">
+            <span class="plan-type-selection-input-toggle"></span>
+          </label>
+          <label for="plan-type">Yearly</label>
+        </aside>
+      </section>
+      <!--    STEP 3-->
+      <section class="step-3-container step-container">
+        <h1 class="step-3-title step-title">Pick add-ons</h1>
+        <p class="step-3-description step-description">Add-ons help enhance your gaming experience.</p>
+        <ul class="step-3-form-container">
+          <li class="step-3-form-item">
+            <label class="step-3-addon-label">
+              <input class="step-3-addon-checkbox" type="checkbox" name="addons" id="addon-multiplayer" onclick="updateFinalPrices()">
+              <section class="step-3-addon-description">
+                <h3 class="step-3-addon-title">Online Service</h3>
+                <p class="step-3-addon-text">Access to multiplayer games</p>
+              </section>
+              <p class="step-3-addon-price">+$1/mo</p>
+            </label>
+          </li>
+          <li class="step-3-form-item">
+            <label class="step-3-addon-label">
+              <input class="step-3-addon-checkbox" type="checkbox" name="addons" id="addon-storage" onclick="updateFinalPrices()">
+              <section class="step-3-addon-description">
+                <h3 class="step-3-addon-title">Larger Storage</h3>
+                <p class="step-3-addon-text">Extra 1TB of cloud save</p>
+              </section>
+              <p class="step-3-addon-price">+$2/mo</p>
+            </label>
+          </li>
+          <li class="step-3-form-item">
+            <label class="step-3-addon-label">
+              <input class="step-3-addon-checkbox" type="checkbox" name="addons" id="addon-profile" onclick="updateFinalPrices()">
+              <section class="step-3-addon-description">
+                <h3 class="step-3-addon-title">Customizable Profile</h3>
+                <p class="step-3-addon-text">Custom theme on your profile</p>
+              </section>
+              <p class="step-3-addon-price">+$2/mo</p>
+            </label>
+          </li>
+        </ul>
+      </section>
+      <!--    STEP 4-->
+      <section class="step-4-container step-container">
+        <h1 class="step-4-title step-title">Finishing up</h1>
+        <p class="step-4-description step-description">Double-check everything looks OK before confirming.</p>
+        <section class="plan-selection-list-container">
+          <section class="plan-type-container">
+            <section class="plan-type-text">
+              <h3 class="plan-type-title">Arcade (Monthly)</h3>
+              <a class="change-plan-type" href="">Change</a>
+            </section>
+            <p class="plan-type-price">$9/mo</p>
+          </section>
+          <hr id="final-hr" style="display: none">
+          <ul id="addon-list" class="addon-list-container">
+
+          </ul>
+        </section>
+        <section class="total-container">
+          <h1 class="total-text">Total (per month)</h1>
+          <p class="total-price">$9/mo</p>
+        </section>
+      </section>
+      <section class="confirmation-container step-container">
+        <img src="assets/images/icon-thank-you.svg" alt="" width="60px">
+        <h1 class="step-title">Thank you!</h1>
+        <p class="step-description">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+      </section>
+      <footer id="footer" class="footer-container">
+        <a id="back-button" class="footer-back" href="#" onClick="previousStep()">Go Back</a>
+        <a id="next-button" class="footer-next" href="#" onClick="nextStep()">Next Step</a>
+      </footer>
+    </aside>
+  </main>
+  <script src="script/menu.js"></script>
+  <script src="script/plan-selector.js"></script>
+</body>
+</html>
