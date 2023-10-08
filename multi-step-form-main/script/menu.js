@@ -35,13 +35,20 @@ function checkFormInputs(){
     const email = document.getElementById("user-email");
     const phone = document.getElementById("user-phone");
 
-    return !name.value || !email.value || !phone.value;
+    return name.value && email.value && phone.value;
 }
 
 function selectStep(value) {
-    if(checkFormInputs()){
+    const warning = document.getElementById("complete-warning");
+    if(!checkFormInputs()){
         menu[0].checked = true;
+        warning.style.display = "block";
+        setTimeout(function() {
+            warning.style.opacity = "100%";
+        }, 100);
         return;
+    }else{
+        warning.style.display = "none";
     }
 
     current = step;
@@ -59,9 +66,11 @@ function finishSubscription(){
     const stepContainers = document.getElementsByClassName("step-container");
     const finalStep = document.getElementsByClassName("confirmation-container");
     const footer = document.getElementsByClassName("footer-container");
+    const menuSelector = document.getElementsByClassName("menu-container");
     stepContainers[3].style.display = "none";
     footer[0].style.display = "none";
     finalStep[0].style.display = "flex";
+    menuSelector[0].style.pointerEvents = "none";
 }
 
 function nextStep(){

@@ -50,25 +50,21 @@ function updateFinalPrices(){
     }
 
     let planTitle = `${planTitles[planIndex - 1]}`;
-    if(yearly){
-        planTitle += " (Yearly)";
-        finalPlanPrice[0].innerHTML = `$${planValues[planIndex - 1] * 10}/yr`;
-    }else{
-        planTitle += " (Monthly)";
-        finalPlanPrice[0].innerHTML = `$${planValues[planIndex - 1]}/yr`;
-    }
-    finalPlanTitle[0].innerHTML = planTitle;
-
-    if(yearly) total *= 10;
     const totalText = document.getElementsByClassName("total-text");
     const totalPrice = document.getElementsByClassName("total-price");
     if(yearly){
+        total *= 10;
+        planTitle += " (Yearly)";
+        finalPlanPrice[0].innerHTML = `$${planValues[planIndex - 1] * 10}/yr`;
         totalText[0].innerHTML = "Total (per year)"
         totalPrice[0].innerHTML = `$${total}/yr`;
     }else{
+        planTitle += " (Monthly)";
+        finalPlanPrice[0].innerHTML = `$${planValues[planIndex - 1]}/mo`;
         totalText[0].innerHTML = "Total (per month)"
         totalPrice[0].innerHTML = `$${total}/mo`;
     }
+    finalPlanTitle[0].innerHTML = planTitle;
 }
 
 function updatePlanPrices(){
