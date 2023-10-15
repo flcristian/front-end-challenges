@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <main class="main-container">
+    <header class="header-container">
+      <h1 class="title first-theme-item">calc</h1>
+      <section class="theme-container">
+        <h2 class="theme-title first-theme-item">THEME</h2>
+        <section class="theme-radio-container">
+          <section class="theme-radio-button-container">
+            <label class="theme-label first-theme-item" for="theme-1">1</label>
+            <input value="0" class="theme-radio selected" id="theme-1" name="theme" type="radio">
+          </section>
+          <section class="theme-radio-button-container">
+            <label class="theme-label first-theme-item" for="theme-2">2</label>
+            <input value="1" class="theme-radio" id="theme-2" name="theme" type="radio">
+          </section>
+          <section class="theme-radio-button-container">
+            <label class="theme-label first-theme-item" for="theme-3">3</label>
+            <input value="2" class="theme-radio" id="theme-3" name="theme" type="radio">
+          </section>
+          <div id="selected" class="theme-radio-selected"></div>
+        </section>
+      </section>
+    </header>
+    <aside class="screen-container">
+      <p class="screen-item first-theme-item">399,981</p>
+    </aside>
+    <section class="keypad-container">
+      <button class="keypad-item keypad-number keypad-number-1">1</button>
+      <button class="keypad-item keypad-number keypad-number-2">2</button>
+      <button class="keypad-item keypad-number keypad-number-3">3</button>
+      <button class="keypad-item keypad-number keypad-number-4">4</button>
+      <button class="keypad-item keypad-number keypad-number-5">5</button>
+      <button class="keypad-item keypad-number keypad-number-6">6</button>
+      <button class="keypad-item keypad-number keypad-number-7">7</button>
+      <button class="keypad-item keypad-number keypad-number-8">8</button>
+      <button class="keypad-item keypad-number keypad-number-9">9</button>
+      <button class="keypad-item keypad-number keypad-number-0">0</button>
+      <button class="keypad-item keypad-operator keypad-operator-del">DEL</button>
+      <button class="keypad-item keypad-operator keypad-operator-add">+</button>
+      <button class="keypad-item keypad-operator keypad-operator-subtract">-</button>
+      <button class="keypad-item keypad-operator keypad-operator-multiply">x</button>
+      <button class="keypad-item keypad-operator keypad-operator-divide">/</button>
+      <button class="keypad-item keypad-operator keypad-operator-decimal">.</button>
+      <button class="keypad-item keypad-operator keypad-operator-equals">=</button>
+      <button class="keypad-item keypad-operator keypad-operator-reset">RESET</button>
+    </section>
+  </main>
+</body>
+</html>
+<script src="script/theme.js"></script>
