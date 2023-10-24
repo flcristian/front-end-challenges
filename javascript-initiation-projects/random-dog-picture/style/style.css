@@ -1,0 +1,55 @@
+*, h1{
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    background-color: #1c0802;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    background-color: rgba(120, 112, 176, 0.18);
+    padding: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px white;
+    border-radius: 25px;
+    gap: 25px;
+}
+
+.title{
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+}
+
+.image{
+    border-radius: 10px;
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+    outline: 1px solid white;
+    object-position: 0 0;
+}
+
+.generate{
+    color: white;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.19);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.45);
+    border-radius: 3px;
+    outline: 1px solid white;
+    cursor: pointer;
+    border: none;
+}
