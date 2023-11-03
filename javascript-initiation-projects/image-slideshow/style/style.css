@@ -1,0 +1,69 @@
+*, h1{
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    height: 100%;
+    background-color: #050201;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    gap: 40px;
+    width: 70%;
+}
+
+.slideshow-container{
+    background: url("../images/image-1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 70vh;
+    flex: 1;
+    border-radius: 10px;
+}
+
+.selector-container{
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.selector-container-right{
+    right: 0;
+}
+
+.selector{
+    position: absolute;
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    transition: 0.25s;
+}
+
+.selector-right{
+    background: linear-gradient(-90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    left: 100%;
+}
+
+.selector-container-left:hover > .selector-left{
+    left: 0;
+}
+.selector-container-right:hover > .selector-right{
+    left: 0;
+}
