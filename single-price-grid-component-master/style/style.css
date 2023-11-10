@@ -1,0 +1,135 @@
+*, h1, h2, section{
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+}
+
+html{
+    background-color: hsl(201, 46%, 93%);
+}
+
+main{
+    margin: 65px 15px 65px 15px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+h1,h2,p{
+    line-height: 20px;
+    color: white;
+}
+
+section{
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.first-section{
+    background-color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.title{
+    font-size: 20px;
+}
+
+.first-title{
+    color: hsl(179, 61%, 44%);
+}
+
+.subtitle{
+    font-size: 16px;
+}
+
+.first-subtitle{
+    color: hsl(71, 73%, 54%);
+}
+
+.description{
+    font-size: 14px;
+}
+
+.first-description{
+    color: hsl(218, 22%, 67%);
+}
+
+.second-section{
+    background-color: hsl(179, 61%, 44%);
+}
+
+.price-container{
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+}
+
+.price-description{
+    font-size: 16px;
+    color: hsl(180, 52%, 70%);
+    font-weight: 400;
+}
+
+.second-description{
+    color: hsl(180, 60%, 93%);
+}
+
+.sign-up-button{
+    background-color: hsl(71, 73%, 54%);
+    border-radius: 8px;
+    padding: 12px 0;
+    color: white;
+    font-weight: 700;
+    border: none;
+}
+
+.third-section{
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: hsl(179, 47%, 52%);
+}
+
+.third-description{
+    color: hsl(180, 59%, 82%);
+}
+
+@media (min-width: 650px){
+    html{
+        height: 100%;
+    }
+
+    body{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        "a a"
+        "b c";
+        max-width: 650px;
+    }
+
+    .first-section{
+        grid-area: a;
+    }
+
+    .second-section{
+        border-bottom-left-radius: 8px;
+        grid-area: b;
+    }
+
+    .third-section{
+        border-bottom-left-radius: 0;
+        grid-area: c;
+    }
+}
