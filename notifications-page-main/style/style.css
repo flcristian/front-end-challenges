@@ -1,0 +1,181 @@
+:root{
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --very-light-grayish-blue: hsl(206, 23%, 94%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+}
+
+*, h1, h2{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    max-width: 560px;
+}
+
+.notifications-header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notifications-title-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.notifications-title{
+    font-size: 20px;
+    color: var(--very-dark-blue);
+}
+
+.notifications-count{
+    font-size: 16px;
+    color: white;
+    background-color: var(--blue);
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.mark-as-read{
+    color: var(--dark-grayish-blue);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.notifications-list-container{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.notification-container{
+    display: flex;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.notification{
+    padding: 12px;
+}
+
+.new{
+    border-radius: 7px;
+    background-color: var(--very-light-grayish-blue);
+}
+
+.notification-icon{
+    width: 40px;
+    height: 40px;
+}
+
+.notification-text-container{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.notification-description{
+    color: var(--dark-grayish-blue);
+    font-size: 12px;
+}
+
+.user-name, .group-name, .post-title{
+    font-weight: 800;
+}
+
+.user-name{
+    color: var(--very-dark-blue);
+}
+
+.group-name{
+    color: var(--blue);
+}
+
+.new-dot{
+    margin-left: 2px;
+    display: inline-block;
+    background-color: var(--red);
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.post-image{
+    width: 35px;
+    height: 35px;
+    margin-left: auto;
+}
+
+.timestamp{
+    font-size: 12px;
+    color: var(--grayish-blue);
+}
+
+.private-message{
+    font-size: 12px;
+    color: var(--dark-grayish-blue);
+    padding: 10px;
+    border: 1px solid var(--light-grayish-blue-2);
+    border-radius: 5px;
+    margin-top: 7px;
+}
+
+.post-title, .user-name, .group-name, .mark-as-read{
+    transition: all 0.2s;
+}
+
+.post-title:hover, .user-name:hover, .group-name:hover, .mark-as-read:hover{
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.private-message{
+    transition: all 0.5s;
+}
+
+.private-message:hover{
+    background-color: var(--light-grayish-blue-2);
+    cursor: pointer;
+}
+
+@media (min-width: 600px){
+    html{
+        background-color: var(--light-grayish-blue-1);
+    }
+
+    body{
+        align-items: center;
+    }
+
+    main{
+        border-radius: 10px;
+    }
+}
