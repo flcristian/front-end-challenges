@@ -6,7 +6,7 @@
 
 html{
     height: 100%;
-    background-color: #281c18;
+    background-color: #090605;
 }
 
 body{
@@ -24,11 +24,34 @@ main{
 }
 
 button{
+    position: relative;
     border: none;
     outline: none;
-    background-color: #ee839c;
-    width: 300px;
-    height: 60px;
+    background-color: #c25b72;
+    width: 400px;
+    height: 100px;
     font-size: 25px;
     text-transform: uppercase;
+    border-radius: 10px;
+    color: #090605;
+    font-weight: 800;
+    overflow: hidden;
 }
+
+button .circle{
+    position: absolute;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: scale 0.5s ease-out;
+}
+
+@keyframes scale{
+    to{
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+    }
+}
+
