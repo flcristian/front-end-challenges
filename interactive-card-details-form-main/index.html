@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <title>Interactive card details form</title>
+</head>
+<body>
+  <main class="main-container">
+    <section class="background-image"></section>
+    <section class="card-display-container">
+
+    </section>
+    <section class="form-container">
+      <section class="primary-credentials-container">
+        <section class="name-container">
+          <label for="name">CARDHOLDER NAME</label>
+          <input type="text" placeholder="e.g. Jane Appleseed" id="name">
+        </section>
+        <section class="number-container">
+          <label for="number">CARD NUMBER</label>
+          <input type="text" placeholder="e.g. 1234 5678 9123 0000" id="number">
+        </section>
+      </section>
+      <section class="secondary-credentials-container">
+        <section class="expiry-date-container">
+          <label>EXP. DATE (MM/YY)</label>
+          <section class="month-year-container">
+            <input type="text" placeholder="MM" id="month">
+            <input type="text" placeholder="YY" id="year">
+          </section>
+        </section>
+        <section class="cvv-container">
+          <label for="cvv">CVV</label>
+          <input type="text" placeholder="e.g. 123" id="cvv">
+        </section>
+      </section>
+      <input type="button" value="Confirm">
+    </section>
+    <script src="app.js"></script>
+  </main>
+
+  <!-- Completed state start -->
+
+<!--  Thank you!
+  We've added your card details
+  Continue-->
+</body>
+</html>
