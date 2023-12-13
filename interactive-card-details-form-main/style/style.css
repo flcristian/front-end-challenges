@@ -4,10 +4,19 @@
     color: hsl(278, 68%, 11%);
 }
 
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+}
+
 .main-container{
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .background-image{
@@ -92,24 +101,31 @@ input[type="text"]{
     border-radius: 5px;
 }
 
+.alert{
+    outline: 1px solid red;
+}
+
 input::placeholder{
     color: hsl(270, 3%, 87%);
 }
 
 input:focus{
     outline: none;
+    border: 1px solid hsl(279, 52%, 26%);
 }
 
 .primary-credentials-container{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 385px;
 }
 
 .secondary-credentials-container{
+    width: 100%;
     margin: 10px 0;
     display: flex;
-     gap: 20px;
+    gap: 20px;
 }
 
 .month-year-container{
@@ -127,11 +143,11 @@ input:focus{
 }
 
 .cvv-container > input[type="text"]{
-    width: calc(100% - 11px);
+    width: calc(100% - 10px);
 }
 
 input[type="button"]{
-    margin-top: 20px;
+    margin-top: 10px;
     color: white;
     background-color: hsl(278, 68%, 11%);
     border: none;
@@ -139,8 +155,66 @@ input[type="button"]{
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.1s;
+    width: min(calc(100% - 40px), 385px);
 }
 
 input[type="button"]:active{
     background-color: hsl(279, 52%, 26%);
+}
+
+.final-title{
+    margin-top: 10px;
+    font-weight: 200;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+.final-paragraph{
+    color: hsl(279, 6%, 55%);
+    letter-spacing: 1px;
+}
+
+.alert-message{
+    color: red;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+@media (min-width: 1000px){
+    .main-container{
+        display: grid;
+        grid-template-areas:
+        "b s";
+        grid-template-columns: 1fr 2fr;
+        height: 100%;
+    }
+
+    .background-image{
+        background: url("../images/bg-main-desktop.png");
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        grid-area: b;
+    }
+
+    .form-container{
+        width: 385px;
+        grid-area: s;
+        margin: auto;
+    }
+
+    .card-display-container{
+        position: absolute;
+        top: 0;
+    }
+
+    .card-back{
+        top: 410px;
+        left: 100px;
+    }
+
+    .card-front{
+        top: 190px;
+        left: 30px;
+    }
 }
