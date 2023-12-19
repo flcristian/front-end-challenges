@@ -1,0 +1,133 @@
+*{
+    font-family: 'Outfit', sans-serif;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(217, 54%, 11%);
+}
+
+main{
+    width: 300px;
+    padding: 20px;
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 15px;
+}
+
+.nft-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-image: url("../images/image-equilibrium.jpg");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.overlay{
+    cursor: pointer;
+    opacity: 0;
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: hsla(178, 100%, 50%, 0.4);
+    border-radius: 10px;
+    display: flex;
+    transition: all 0.5s;
+}
+
+.overlay-icon{
+    margin: auto;
+}
+
+.nft-image:hover > .overlay{
+    opacity: 1;
+}
+
+.title{
+    display: inline-block;
+    margin: 10px 0 0 0;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.title:hover{
+    color: hsl(178, 100%, 50%);
+}
+
+.description{
+    color: hsl(215, 51%, 70%);
+    font-weight: 300;
+    font-size: 15px;
+}
+
+.price-time-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.price{
+    color: hsl(178, 100%, 50%);
+}
+
+.time-container{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.time{
+    color: hsl(215, 51%, 70%);
+}
+
+hr{
+    margin: 20px 0;
+    border: none;
+    background-color: hsl(215, 32%, 27%);
+    height: 1px;
+}
+
+.final-section{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.avatar{
+    max-width: 30px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.final-description{
+    font-weight: 300;
+    font-size: 15px;
+    color: hsl(215, 51%, 70%);
+}
+
+.author-name{
+    font-weight: 300;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.author-name:hover{
+    color: hsl(178, 100%, 50%);
+}
